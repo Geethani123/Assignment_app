@@ -1,38 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 40px;
+  font-family: "Lato", sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  /* z-index: 3; */
+  background: white;
+  border-radius: 7px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 46%;
+  height: fit-content;
+  margin: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.imageContainer {
+  position: relative;
+  height: 200px;
+}
+
+.hoverContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  visibility: hidden;
+  cursor: pointer;
+}
+.imageContainer:hover .hoverContainer {
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: visible;
+}
+.bottom {
+  position: relative;
+  display: flex;
+  margin-top: 28px;
+  color: gray;
+  align-items: center;
+}
+
+.img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.popUpcard {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cancelbtn {
+  color: gray;
+  padding: 15px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: end;
 }
